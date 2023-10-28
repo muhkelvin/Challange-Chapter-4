@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.auth.SignUpFragment">
+    tools:context=".ui.auth.SignFragment">
 
 
     <TextView
@@ -43,13 +43,22 @@
             android:hint="Masukkan Password"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Login"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"/>
 
-
+    <TextView
+        android:id="@+id/tv_belum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:text="Belum Punya AKun"
+        android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
