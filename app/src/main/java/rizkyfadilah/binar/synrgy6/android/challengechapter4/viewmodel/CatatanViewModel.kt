@@ -1,31 +1,27 @@
 package rizkyfadilah.binar.synrgy6.android.challengechapter4.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import rizkyfadilah.binar.synrgy6.android.challengechapter4.model.Catatan
+import rizkyfadilah.binar.synrgy6.android.challengechapter4.model.CatatanEntity
 import rizkyfadilah.binar.synrgy6.android.challengechapter4.room.CatatanRepository
 
-// CatatanViewModel.kt
 class CatatanViewModel(private val repository: CatatanRepository) : ViewModel() {
 
-//    val semuaCatatan: LiveData<List<Catatan>> = repository.semuaCatatan
+//    fun getAllCatatans() = repository.getAllCatatans()
 
-    fun tambahCatatan(catatan: Catatan) = viewModelScope.launch {
-        repository.tambahCatatan(catatan)
+    fun insert(catatan: CatatanEntity) = viewModelScope.launch {
+        repository.insert(catatan)
     }
 
-    fun updateCatatan(catatan: Catatan) = viewModelScope.launch {
-        repository.updateCatatan(catatan)
+    fun update(catatan: CatatanEntity) = viewModelScope.launch {
+        repository.update(catatan)
     }
 
-    fun hapusCatatan(catatan: Catatan) = viewModelScope.launch {
-        repository.hapusCatatan(catatan)
-    }
-
-    fun hapusSemuaCatatan() = viewModelScope.launch {
-        repository.hapusSemuaCatatan()
+    fun delete(catatan: CatatanEntity) = viewModelScope.launch {
+        repository.delete(catatan)
     }
 }
+
 

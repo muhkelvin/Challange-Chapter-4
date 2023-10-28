@@ -45,9 +45,6 @@ class SignFragment : Fragment() {
                 startActivity(Intent(requireContext(), MainActivity::class.java))
                 requireActivity().finish()
             } else {
-                // Handle login failure
-                // For simplicity, showing a toast message
-                // You may want to implement a proper UI feedback
                 Toast.makeText(requireContext(), "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
         }

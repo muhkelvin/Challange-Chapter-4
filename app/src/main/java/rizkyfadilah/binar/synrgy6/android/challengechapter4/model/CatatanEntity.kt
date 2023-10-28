@@ -4,8 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "catatan_table")
-data class Catatan(
+@Entity(tableName = "catatans")
+data class CatatanEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    @ColumnInfo("isiCatatan") var type: String,
+    @ColumnInfo(name = "title") var type: String,
+
 )

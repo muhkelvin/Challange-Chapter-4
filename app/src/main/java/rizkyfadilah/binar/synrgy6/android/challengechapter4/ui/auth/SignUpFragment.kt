@@ -36,12 +36,9 @@ class SignUpFragment : Fragment() {
 
             if (password == confirmPassword) {
                 saveCredentials(username, password)
-                // Registration successful, navigate to the login fragment
-//                navigateToLoginFragment()
+
             } else {
-                // Handle password mismatch
-                // For simplicity, showing a toast message
-                // You may want to implement a proper UI feedback
+
                 Toast.makeText(requireContext(), "Password mismatch", Toast.LENGTH_SHORT).show()
             }
         }

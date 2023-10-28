@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import rizkyfadilah.binar.synrgy6.android.challengechapter4.model.Catatan
+import rizkyfadilah.binar.synrgy6.android.challengechapter4.model.CatatanEntity
 
 // CatatanDatabase.kt
-@Database(entities = [Catatan::class], version = 1, exportSchema = false)
+@Database(entities = [CatatanEntity::class], version = 1, exportSchema = false)
 abstract class CatatanDatabase : RoomDatabase() {
 
     abstract fun catatanDao(): CatatanDao
