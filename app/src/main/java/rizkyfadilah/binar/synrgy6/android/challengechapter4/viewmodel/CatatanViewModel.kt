@@ -10,7 +10,7 @@ import rizkyfadilah.binar.synrgy6.android.challengechapter4.room.CatatanReposito
 // CatatanViewModel.kt
 class CatatanViewModel(private val repository: CatatanRepository) : ViewModel() {
 
-    val semuaCatatan: LiveData<List<Catatan>> = repository.semuaCatatan
+//    val semuaCatatan: LiveData<List<Catatan>> = repository.semuaCatatan
 
     fun tambahCatatan(catatan: Catatan) = viewModelScope.launch {
         repository.tambahCatatan(catatan)

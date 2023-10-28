@@ -10,7 +10,7 @@ import rizkyfadilah.binar.synrgy6.android.challengechapter4.model.Catatan;
 // CatatanRepository.kt
 class CatatanRepository(private val catatanDao: CatatanDao) {
 
-    val semuaCatatan: LiveData<List<Catatan>> = catatanDao.getAllCatatan()
+//    val semuaCatatan: LiveData<List<Catatan>> = catatanDao.getAllCatatan()
 
     suspend fun tambahCatatan(catatan: Catatan) {
         catatanDao.tambahCatatan(catatan)
