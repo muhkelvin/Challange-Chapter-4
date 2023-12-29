@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/spashFragment"
+        android:name="rizkyfadilah.binar.synrgy6.android.challengechapter4.SpashFragment"
+        android:label="fragment_spash"
+        tools:layout="@layout/fragment_spash" >
+        <action
+            android:id="@+id/action_spashFragment_to_signFragment"
+            app:destination="@id/signFragment" />
+        <action
+            android:id="@+id/action_spashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signFragment"
+        android:name="rizkyfadilah.binar.synrgy6.android.challengechapter4.ui.auth.SignFragment"
+        android:label="fragment_sign"
+        tools:layout="@layout/fragment_sign" >
+        <action
+            android:id="@+id/action_signFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="rizkyfadilah.binar.synrgy6.android.challengechapter4.ui.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signFragment"
+            app:destination="@id/signFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="rizkyfadilah.binar.synrgy6.android.challengechapter4.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/custom_delete_dialog.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hapus Data"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apakah Anda yakin ingin menghapus data ini?"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tidak"
+        android:onClick="onNoClicked"
+        app:layout_constraintTop_toBottomOf="@+id/dialogMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnYes"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btnYes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ya"
+        android:onClick="onYesClicked"
+        app:layout_constraintTop_toBottomOf="@+id/dialogMessage"
+        app:layout_constraintStart_toEndOf="@+id/btnNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

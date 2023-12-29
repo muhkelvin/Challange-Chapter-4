@@ -1,10 +1,10 @@
-package rizkyfadilah.binar.synrgy6.android.challengechapter4.room
+package rizkyfadilah.binar.synrgy6.android.challengechapter4.data.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import rizkyfadilah.binar.synrgy6.android.challengechapter4.model.CatatanEntity
+import rizkyfadilah.binar.synrgy6.android.challengechapter4.data.model.CatatanEntity
 
 // CatatanDatabase.kt
 @Database(entities = [CatatanEntity::class], version = 1, exportSchema = false)
@@ -29,3 +29,4 @@ abstract class CatatanDatabase : RoomDatabase() {
         }
     }
 }
+
